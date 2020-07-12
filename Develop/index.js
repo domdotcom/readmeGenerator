@@ -54,5 +54,13 @@ const questions = [
         name: "GitHub profile picture",
         type: "input"
     }
-
 ];
+
+function writeToFile(fileName, data) {
+}
+
+function init() {
+
+}
+
+init();
