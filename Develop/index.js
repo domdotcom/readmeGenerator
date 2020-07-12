@@ -57,7 +57,6 @@ const questions = [
 ];
 
 function init() {
-
     inquirer.prompt(questions)
         .then((inquirerResponse) => {
             console.log("Making ReadMe");
@@ -66,7 +65,6 @@ function init() {
         .catch((err) => {
             console.log(err);
         })
-
 }
 
 init();

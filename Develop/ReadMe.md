@@ -1,12 +1,12 @@
 
 
-  // [![Contributors](https://img.shields.io/github/contributors/undefined/d)](https://github.com/undefined/d/graphs/contributors)
+  // [![Contributors](https://img.shields.io/github/contributors/undefined/ReadMe Generator)](https://github.com/undefined/ReadMe Generator/graphs/contributors)
   // undefined
 
-  # d
+  # ReadMe Generator
   # Description
 
-  d
+  A command-line application that dynamically generates a README.md from a user's input.
   # Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
@@ -14,12 +14,12 @@
   * [Contributing](#Contributing)
   * [Tests](#Tests)
   * [Questions](#Questions)
+  
   # Installation
-
-  d
+  npm i
 
   # Usage
-  d
+  node index.js
 
   # License
   undefined License selected. See the badge above for further details.
