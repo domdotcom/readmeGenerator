@@ -1,40 +1,33 @@
 # Unit 09 Node.js and ES6+ Homework: Good README Generator
 
-Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+[![Contributors](https://img.shields.io/github/contributors/domcotcom/ReadmeGenerator)](https://github.com/domcotcom/ReadmeGenerator/graphs/contributors)
+[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
-```sh
+# ReadMe Generator
+
+# Description
+A command-line application that dynamically generates a README.md from a user's input.
+# Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
+# Installation
+npm i
+
+# Usage
 node index.js
-```
 
-The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
+# License
+Boost License selected. See the badge above for further details.
 
-The README will be populated with the following:
+# Contributing
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+# Tests
+no testing
+# Questions
+[![Repo Owner Image](https://avatars.githubusercontent.com/domcotcom?s=100)](mailto:dominikaperkowska@gmail.com)
 
-* At least one badge
-* Project title
-* Description
-* Table of Contents
-* Installation
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
-  * User GitHub profile picture
-  * User GitHub email
-
-Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
-
-```
-AS A developer
-
-I WANT a README generator
-
-SO THAT I can easily put together a good README for a new project
-```
-
-Refer to the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md).
-
-## Business Context
-
-When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.

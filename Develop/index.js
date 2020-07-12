@@ -1,74 +1,67 @@
-const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
-
-const fs = require("fs");;
+const fs = require('fs');
+const inquirer = require('inquirer');
+const gm = require("./utils/generateMarkdown.js");
 
 const questions = [
-    {   
-        message: "What is the project title?",
-        name: "title",
-        type: "input"
+    {
+        "message": "What is your GitHub id?",
+        "type": "input",
+        "name": "username"
     },
-    {   
-        message: "Provide a brief description of the project.",
-        name: "description",
-        type: "input"
+    {
+        "message": "What's the project repo name?",
+        "type": "input",
+        "name": "project"
     },
-    {  
-        message: "Enter the table of contents",
-        name: "table of contents",
-        type:"input"
+    {
+        "message": "What's the project title?",
+        "type": "input",
+        "name": "projectTitle",
     },
-    {   
-        message: "What are the instructions for installation?",
-        name: "installation",
-        type: "input"
+    {
+        "message": "What's the project description?",
+        "type": "input",
+        "name": "projectDescription",
     },
-    {   
-        message: "How do you run the application?",
-        name: "usage",
-        type: "input"
+    {
+        "message": "What are the installation instructions?",
+        "type": "input",
+        "name": "installation",
     },
-    {   
-        message: "What licenses do you require for this project?",
-        name: "licenses",
-        type: "input"
+    {
+        "message": "How do you run the application?",
+        "type": "input",
+        "name": "usage",
     },
-    {   
-        message: "Were there contributors for this project?",
-        name: "contributors",
-        type: "input"
+    {
+        "message": "Which license do you want to use for this project?",
+        "type": "list",
+        "name": "license",
+        "choices": ["Apache", "Boost"],
+        "default": "Apache"
     },
-    {   
-        message: "How do you run tests for this project?",
-        name: "test",
-        type: "input"
+    {
+        "message": "How do you run the tests?",
+        "type": "input",
+        "name": "tests",
     },
-    {   
-        message: "What is your github email address?",
-        name: "email",
-        type: "input"
+    {
+        "message": "What is the email address of the repo owner?",
+        "type": "input",
+        "name": "email",
     },
-    {   
-        message: "Please provide a profile picture.",
-        name: "GitHub profile picture",
-        type: "input"
-    }
 ];
 
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data);
+}
+
 function init() {
-    inquirer.prompt(questions)
-        .then((inquirerResponse) => {
-            console.log("Making ReadMe");
-            promptUser(inquirerResponse)
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+    inquirer
+    .prompt(questions)
+    .then(answers => {
+      writeToFile("README.md", gm.generateMarkdown(answers));
+    });
 }
 
 init();
-function promptUser(answers){
-    const readME = generateMarkdown(answers);
-    fs.writeFileSync("ReadMe.md", readME,"utf-8");
-}

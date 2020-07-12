@@ -5,47 +5,48 @@ const licenseBadges = {
 
 function generateMarkdown(data) {
   let username = data.username;
-  let title = data.title;
-  let description = data.description;
+  let project = data.project;
+  let projectTitle = data.projectTitle;
+  let projectDescription = data.projectDescription;
   let installation = data.installation;
   let usage = data.usage;
   let license = data.license;
-  let contributors = data.contributors
   let tests = data.tests;
   let email = data.email;
+
   return `
+[![Contributors](https://img.shields.io/github/contributors/${username}/${project})](https://github.com/${username}/${project}/graphs/contributors)
+${licenseBadges[license]}
 
-  // [![Contributors](https://img.shields.io/github/contributors/${username}/${title})](https://github.com/${username}/${title}/graphs/contributors)
-  // ${licenseBadges[license]}
+# ${projectTitle}
 
-  # ${title}
-  # Description
+# Description
+${projectDescription}
+# Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 
-  ${description}
-  # Table of Contents
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [License](#License)
-  * [Contributing](#Contributing)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
-  
-  # Installation
-  ${installation}
+# Installation
+${installation}
 
-  # Usage
-  ${usage}
+# Usage
+${usage}
 
-  # License
-  ${license} License selected. See the badge above for further details.
+# License
+${license} License selected. See the badge above for further details.
 
-  # Contributing
-  When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change. Please note we have a code of conduct, please follow it in all your interactions with the project.
-
-  # Tests
-  ${tests}
+# Contributing
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+# Tests
+${tests}
+# Questions
+[![Repo Owner Image](https://avatars.githubusercontent.com/${username}?s=100)](mailto:${email})
 
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown: generateMarkdown};
