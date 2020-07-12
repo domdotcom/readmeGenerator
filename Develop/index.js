@@ -1,9 +1,9 @@
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
+
+const fs = require("fs");;
+
 const questions = [
-    {   
-        message: "What is your GitHub username?",
-        name: "username",
-        type:"input"
-    },
     {   
         message: "What is the project title?",
         name: "title",
@@ -36,7 +36,7 @@ const questions = [
     },
     {   
         message: "Were there contributors for this project?",
-        name: "contribution",
+        name: "contributors",
         type: "input"
     },
     {   
@@ -56,11 +56,21 @@ const questions = [
     }
 ];
 
-function writeToFile(fileName, data) {
-}
-
 function init() {
+
+    inquirer.prompt(questions)
+        .then((inquirerResponse) => {
+            console.log("Making ReadMe");
+            promptUser(inquirerResponse)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 
 }
 
 init();
+function promptUser(answers){
+    const readME = generateMarkdown(answers);
+    fs.writeFileSync("ReadMe.md", readME,"utf-8");
+}
