@@ -1,35 +1,35 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const gm = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const questions = [
     {
-        "message": "What is your GitHub id?",
+        "message": "What is your GitHub username?",
         "type": "input",
         "name": "username"
     },
     {
-        "message": "What's the project repo name?",
+        "message": "What is the repo name?",
         "type": "input",
         "name": "project"
     },
     {
-        "message": "What's the project title?",
+        "message": "What is the title ?",
         "type": "input",
-        "name": "projectTitle",
+        "name": "title",
     },
     {
-        "message": "What's the project description?",
+        "message": "Describe the project.",
         "type": "input",
-        "name": "projectDescription",
+        "name": "description",
     },
     {
-        "message": "What are the installation instructions?",
+        "message": "How do you install this app?",
         "type": "input",
         "name": "installation",
     },
     {
-        "message": "How do you run the application?",
+        "message": "How do you run the app?",
         "type": "input",
         "name": "usage",
     },
@@ -38,15 +38,14 @@ const questions = [
         "type": "list",
         "name": "license",
         "choices": ["Apache", "Boost"],
-        "default": "Apache"
     },
     {
         "message": "How do you run the tests?",
         "type": "input",
-        "name": "tests",
+        "name": "testing",
     },
     {
-        "message": "What is the email address of the repo owner?",
+        "message": "What is your email address?",
         "type": "input",
         "name": "email",
     },
@@ -60,7 +59,7 @@ function init() {
     inquirer
     .prompt(questions)
     .then(answers => {
-      writeToFile("README.md", gm.generateMarkdown(answers));
+      writeToFile("README.md", generateMarkdown.generateMarkdown(answers));
     });
 }
 

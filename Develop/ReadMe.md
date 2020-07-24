@@ -1,11 +1,11 @@
 
-[![Contributors](https://img.shields.io/github/contributors/domcotcom/ReadmeGenerator)](https://github.com/domcotcom/ReadmeGenerator/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/domdotcom/undefined)](https://github.com/domdotcom/undefined/graphs/contributors)
 [![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
-# ReadMe Generator
+# undefined
 
 # Description
-A command-line application that dynamically generates a README.md from a user's input.
+Command line application that dynamically generates a read me file based on a users input.
 # Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -15,7 +15,7 @@ A command-line application that dynamically generates a README.md from a user's 
 * [Questions](#Questions)
 
 # Installation
-npm i
+nmp
 
 # Usage
 node index.js
@@ -25,8 +25,10 @@ Boost License selected. See the badge above for further details.
 
 # Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-# Tests
-no testing
-# Questions
-[![Repo Owner Image](https://avatars.githubusercontent.com/domcotcom?s=100)](mailto:dominikaperkowska@gmail.com)
+
+# Testing
+no tests
+
+
+[![Repo Owner Image](https://avatars.githubusercontent.com/domdotcom?s=100)](mailto:dominikaperkowska@gmail.com)
 

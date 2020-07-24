@@ -5,23 +5,24 @@ const licenseBadges = {
 
 function generateMarkdown(data) {
   let username = data.username;
-  let project = data.project;
+  let email = data.email;
+  let projectRepo = data.projectRepo;
   let projectTitle = data.projectTitle;
-  let projectDescription = data.projectDescription;
+  let description = data.description;
   let installation = data.installation;
   let usage = data.usage;
   let license = data.license;
-  let tests = data.tests;
-  let email = data.email;
+  let testing = data.testing;
+  
 
   return `
-[![Contributors](https://img.shields.io/github/contributors/${username}/${project})](https://github.com/${username}/${project}/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/${username}/${projectRepo})](https://github.com/${username}/${projectRepo}/graphs/contributors)
 ${licenseBadges[license]}
 
 # ${projectTitle}
 
 # Description
-${projectDescription}
+${description}
 # Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -41,9 +42,11 @@ ${license} License selected. See the badge above for further details.
 
 # Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-# Tests
-${tests}
-# Questions
+
+# Testing
+${testing}
+
+
 [![Repo Owner Image](https://avatars.githubusercontent.com/${username}?s=100)](mailto:${email})
 
 `;
