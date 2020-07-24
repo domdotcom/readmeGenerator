@@ -31,3 +31,6 @@ no testing
 # Questions
 [![Repo Owner Image](https://avatars.githubusercontent.com/domcotcom?s=100)](mailto:dominikaperkowska@gmail.com)
 
+# Video
+Here's a link to a [video](https://drive.google.com/file/d/1yqtFpbTgydKJSj3myqtKgahc1rUamS-o/view) of the functionality.
+
